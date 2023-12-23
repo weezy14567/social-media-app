@@ -6,8 +6,441 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+header {
+  width: 100%;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  background-color: pink;
+  z-index: 1;
+  position: fixed;
+  transition: 0.9s;
+}
+
+main {
+  flex: 1;
+  margin-top: 60px;
+  overflow-y: auto;
+  background-color: #f0f0f0;
+}
+
+.site-container {
+  min-height: 100vh;
+}
+
+.header-dive {
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.imagediv:hover {
+  opacity: 0.7;
+  transition: 0.9s;
+}
+
+.imagediv span {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: 'Lumanosimo', cursive;
+}
+
+.header-icons span i {
+  font-size: 25px;
+  padding-right: 30px;
+  color: rgba(57, 57, 10, 0.854);
+  cursor: pointer;
+}
+
+.icons-position {
+  position: relative;
+}
+.icons-count {
+  position: absolute;
+  left: 18px;
+  top: -5px;
+  font-size: 12px !important;
+}
+
+.post {
+  background-color: rgba(255, 255, 255, 0) !important;
+  width: 100% !important;
+  height: 100% !important;
+  color: rgb(110, 110, 239) !important;
+  position: fixed;
+  top: 0;
+
+  z-index: 999; /* Set a high z-index value to ensure it's on top of other content */
+}
+
+.noopacity {
+  opacity: 1;
+}
+
+.user-image {
+  width: 50px;
+  height: 50px !important;
+  border-radius: 50%;
+  background-color: grey !important;
+}
+
+.user-image img {
+  width: 100%;
+  height: 100% !important;
+  border-radius: 50%;
+  object-fit: cover;
+  text-decoration: none !important;
+}
+
+.my-textarea {
+  resize: none;
+  background-color: white !important;
+}
+
+.navbars {
+  overflow: scroll;
+  position: static;
+  height: 100vh;
+  width: 20%;
+}
+.containers {
+  height: 100vh;
+}
+
+.online-page {
+  overflow: scroll;
+  position: static;
+  height: 100vh;
+}
+
+.main-page {
+  overflow: scroll;
+  position: static;
+  height: 100vh;
+}
+
+.feed-Wrapper {
+  margin: auto;
+}
+
+.postImg img {
+  width: 100%;
+}
+
+.navColor {
+  color: white !important;
+}
+
+.naHover:hover {
+  opacity: 0.5;
+  transform: scale(1.1);
+  box-shadow: 0 0 0.5px rgba(0, 0, 0, 0.3);
+}
+
+.addPostBg {
+  border-radius: 5px;
+}
+
+.userCoverPhoto {
+  position: relative;
+}
+
+.userCoverPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileImageDiv img {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  position: absolute;
+  object-fit: cover;
+  top: 85%;
+  border: 5px solid white;
+}
+
+.profileImageDiv {
+  display: flex;
+  align-items: center;
+  height: 150px;
+}
+
+.hobbiesButton {
+  opacity: 0.9;
+}
+
+.statusImgDiv {
+  width: 100px;
+  height: 180px;
+  border-radius: 10px;
+}
+.statusImgDiv img {
+  width: 100px;
+  height: 180px !important;
+  object-fit: cover;
+  border-radius: 10px;
+}
+/* .userImgDiv {
+  width: 80px;
+  
+  max-height: 100px;
+  border-radius: 10px;
+} */
+
+.user-imageFriends {
+  width: 130px;
+  max-height: 120px !important;
+  border-radius: 10px;
+  background-color: grey !important;
+}
+.user-imageFriends img {
+  width: 100%;
+  max-height: 120px !important;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.userImgDiv img {
+  height: 100px !important;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.iconBlue {
+  color: blue !important;
+}
+.commentBG {
+  background-color: rgb(204, 201, 201) !important;
+}
+
+.commentOpen {
+  position: absolute !important;
+  top: 50px !important;
+  left: 0px;
+  z-index: 9;
+  
+  color:black !important;
+ 
+}
+.commentClose {
+  position: relative !important;
+}
+.videoCommentOpen{
+  position:relative !important;
+}
+.singlePictureIcons {
+  color: whitesmoke;
+  position: relative;
+}
+
+.singlePictureImgDiv {
+  width: 60%;
+  position: absolute;
+  top: 0;
+  right: 20%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.comentInputBorder{
+  border-radius: 0px 20px 20px 0px !important;
+}
+
+
+.singlePictureImgDiv img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.singlePictureImgNextIcons {
+  position: absolute;
+  top: 50%;
+  color: whitesmoke;
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  margin-left: 2px;
+  align-items: center;
+}
+
+.singlePictureImgNextIcons button {
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.singleImageComponent {
+  scrollbar-width: 0.5em;
+}
+
+.desc {
+  font-size: 18px;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.activee {
+  border-bottom: 2px solid rgb(239, 34, 68) !important;
+  transition: 0.5s ease-in-out !important;
+}
+
+.activia {
+  border-bottom: 2px solid rgb(204, 204, 218) !important;
+  transition: 0.5s ease-in-out !important;
+}
+.nonactivia {
+  transition: 0.5s ease-in-out !important;
+}
+
+.vertical-line {
+  border-left: 1px solid gray !important;
+}
+
+.aboutActive {
+  color: rgb(13, 13, 240) !important;
+  background-color: rgb(246, 216, 223) !important;
+}
+
+.overviewLine:hover {
+  border-bottom: 1px solid rgb(86, 86, 230) !important;
+  transition: 0.9s ease-in-out !important;
+  opacity: 0.5;
+}
+.overviewLine {
+  opacity: 0.7;
+}
+
+body.scroll-lock {
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.739);
+}
+
+.headerBG {
+  background-color: rgba(80, 80, 253, 0.97) !important;
+  color: white !important;
+}
+
+.userBg {
+  border: 1px solid white !important;
+}
+
+.singlePictureIcons:hover .icons {
+  display: flex !important;
+}
+
+.iconsD {
+  display: none !important;
+}
+
+.unread {
+  background-color: rgba(159, 159, 254, 0.37) !important;
+}
+.unread1 {
+  background-color: rgba(217, 217, 246, 0.485) !important;
+}
+/* .unread{
+  background-color: rgba(68, 68, 232, 0.813) !important;
+} */
+
+/* Your styles for small screens */
+
+@media (max-width: 840px) {
+  .feed-Wrapper {
+    width: 100vw !important; /* Set to 100% on small screens */
+  }
+
+  .coverContainer {
+    width: 100vw !important;
+    height: 20% !important;
+  }
+
+  .profileImageDiv img {
+    top: 70% !important;
+  }
+  .profiledescPadd {
+    padding-left: 400px !important;
+  }
+  .profileStorybutton {
+    display: flex;
+
+    align-items: center;
+
+    width: 90vw !important;
+  }
+  .profilenameset {
+    margin-top: 8rem;
+  }
+
+  .categories {
+    height: 92vh !important;
+  }
+
+  .userInfomation {
+    width: 100vw !important;
+  }
+
+  .postBarAtProfile {
+  }
+
+  .profilePostCards {
+    margin-bottom: 1rem !important;
+  }
+  .buttonWidth {
+    width: 120px !important;
+  }
+
+  .mobilePhoto {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .mobileFriends {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .mobilefriends1 {
+    flex-direction: column;
+    width: 100% !;
+  }
+}
+
+/* Media query for large screens */
+@media (min-width: 992px) {
+  .feed-Wrapper {
+    width: 80% !important; /* Set to 85% on large screens */
+  }
+  .postingBox {
+    min-width: 500px !important;
+  }
+}
+
+.main-page::-webkit-scrollbar {
+  width: 0.5em !important;
+}
+.singleImageComponent::-webkit-scrollbar {
+  width: 0.5em !important;
+}
+
+.main-page::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+.singleImageComponent::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+.main-page::-webkit-scrollbar-thumb {
+  background-color: transparent !important;
+}
+.singleImageComponent::-webkit-scrollbar-thumb {
+  background-color: transparent !important;
+}
+
+.navbars::-webkit-scrollbar {
+  width: 6.5em !important;
+}
+
+main::-webkit-scrollbar-track {
+  background: transparent !important;
 }
